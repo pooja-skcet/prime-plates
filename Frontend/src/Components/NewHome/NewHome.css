@@ -1,0 +1,359 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.home-page0 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Added shadow for header */
+  transition: background-color 0.3s ease;
+}
+
+.header0:hover {
+  background-color: #f8f8f8; /* Light background on hover */
+}
+
+.logo0 img {
+  max-height: 70px; /* Adjust the height to fit your design */
+  width: auto;
+  object-fit: contain; /* Ensures the logo image scales well without distortion */
+}
+
+.nav0 a {
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.nav0 a:hover {
+  background-color: #333;
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.btn0 {
+  background-color: #FF7518;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn0:hover {
+  background-color: #FF5F15;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.hero0 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  text-align: left;
+  margin-top: 60px; /* Adjust margin to account for the fixed header */
+}
+
+.hero0-text {
+  flex: 1;
+  margin-right: 30px; /* Increase margin for better spacing */
+}
+
+.hero0 h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
+}
+
+.hero0 p {
+  font-size: 1.5em; /* Slightly larger font for better readability */
+}
+
+.hero0-image {
+  flex: 1;
+  max-width: 70%; /* Increase width for larger image */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  border-radius: 10px; /* Slightly larger border radius */
+  transition: transform 0.3s ease;
+}
+
+.hero0-image:hover {
+  transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+.services0, .packages0 {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px; /* Added gap between cards */
+}
+
+.services-section h2, .packages-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.service-card0, .package-card0 {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex: 1;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card0:hover, .package-card0:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 15px rgba(0,0,0,0.2); /* More pronounced shadow */
+}
+
+.card-image0 {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.service-card0:hover .card-image0, .package-card0:hover .card-image0 {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.more-info0 {
+  display: inline-block;
+  margin-top: 10px;
+  color:  #FF7518;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.more-info0:hover {
+  color: #FF5F15;
+}
+
+.footer0 {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  width: 100%; /* Ensure it spans the full width */
+  box-sizing: border-box;
+  margin-bottom: 0; /* Remove any extra margin */
+  padding-bottom: 0; /* Remove any extra padding */
+}
+
+.footer-content0 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer0 p {
+  margin: 0;
+}
+
+.footer-contact-button0 {
+  background-color:  #FF7518;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-contact-button0:hover {
+  background-color: #FF5F15;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 768px) {
+  .header0 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .nav0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .nav0 a {
+    margin: 5px 0;
+  }
+
+  .hero0 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  .hero0-text {
+    margin-right: 0;
+  }
+
+  .hero0-image {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  .services0, .packages0 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card0, .package-card0 {
+    max-width: 90%;
+    margin: 10px 0;
+  }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Additional close-to-hover effect (using pseudo-elements) */
+.hero0 h1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: rgba(255, 99, 71, 0.1); /* Light red background */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.hero0 h1:hover::before {
+  opacity: 1;
+}
+
+
+
+/* Ensure consistent box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.header0, .footer0, .hero0, .services0, .packages0 {
+  max-width: 100%; /* Ensure these sections do not exceed the viewport width */
+  overflow-x: hidden; /* Additional protection to prevent overflow */
+}
+
+/* Adjust the hero section to avoid overflow */
+.hero0 {
+  padding: 60px 20px;
+  margin-top: 60px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.hero0-image {
+  max-width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+/* Ensure the header doesn't overflow */
+.header0 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure that no scrollbar appears due to the footer or other sections */
+.footer0 {
+  width: 100%;
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.home-page0 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 0; /* Ensure no padding is added */
+}
+
+.footer0 {
+  margin-top: auto;
+  padding-bottom: 0;
+}
+
+
+.services0 p, .packages0 p {
+  font-size: 1.1em; /* Increase font size slightly */
+  font-weight: 500; /* Increase font weight for better readability */
+  line-height: 1.3; /* Increase line height for better spacing */
+  letter-spacing: 0.5px; /* Add some letter spacing for clarity */
+  color: #333; /* Darken the text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Change to a modern, clean font */
+}

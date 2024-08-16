@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-login-container9 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://media.istockphoto.com/id/1456782892/photo/secure-access-to-personal-information-of-network-users-data-protection-and-secured-internet.webp?b=1&s=170667a&w=0&k=20&c=uYzUcjJYFY_fHVRmeIQZ3Qtb93vTq838YaiFD7pUrCY=') no-repeat center center/cover;
+}
+
+.admin-login-box9 {
+  background-color: #fff;
+  padding: 20px; /* Increased padding for more space */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.admin-login-box9:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.admin-login-box9 h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.form-group9 {
+  margin-bottom: 20px; /* Increased bottom margin */
+  text-align: left;
+}
+
+.form-group9 label {
+  display: block;
+  margin-bottom: 8px; /* Increased bottom margin */
+  color: #555;
+  font-size: 1rem;
+}
+
+.form-group9 input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: border-color 0.3s ease;
+}
+
+.form-group9 input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message9 {
+  color: red;
+  margin-bottom: 20px; /* Increased bottom margin */
+  font-size: 0.9rem;
+}
+
+.login-button9 {
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.login-button9:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .admin-login-box9 {
+    width: 90%;
+    padding: 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .admin-login-box9 h2 {
+    font-size: 1.25rem;
+  }
+
+  .form-group9 label, .form-group9 input {
+    font-size: 0.9rem;
+  }
+
+  .login-button9 {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,345 @@
+/* .contact-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+     background-color: #f0b997;
+  }
+  
+  .address-section,
+  .contact-section,
+  .map-section {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+  }
+  
+  .address-section h2,
+  .contact-section h2,
+  .map-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .address-section p,
+  .contact-section p {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  
+  .map-section iframe {
+    width: 100%;
+    border: none;
+  }
+  
+  .reviews-section {
+    margin-top: 20px;
+  }
+  
+  .reviews-section h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .reviews-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .reviews-section li {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  .header8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    background-color: white;
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+  }
+ 
+  .header8 h1 {
+    margin: 0;
+  }
+  
+  .navigation8 a {
+    margin: 0 10px;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navigation8 a:hover {
+    background-color: #333;
+    color: white;
+  } */
+   
+  .contact-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin-top: 80px; /* Adjusted for fixed header */
+    background-color: #fafafa;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-header h1 {
+    font-size: 2.5em;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .contact-header h1:hover {
+    color: #f09d51; /* Color change on hover */
+  }
+  
+  .contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  .contact-details:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  .address-section,
+  .contact-section,
+  .map-section {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added light shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .address-section:hover,
+  .contact-section:hover,
+  .map-section:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .address-section h2,
+  .contact-section h2,
+  .map-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #FF7518;
+    font-weight: 500; /* Increase font weight for better readability */
+  line-height: 1.3; /* Increase line height for better spacing */
+  letter-spacing: 0.5px; /* Add some letter spacing for clarity */
+ 
+  font-family: 'Roboto', sans-serif; /* Change to a modern, clean font */
+
+  }
+  
+  .address-section p,
+  .contact-section p {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #333;
+    font-weight: 500; /* Increase font weight for better readability */
+  line-height: 1.3; /* Increase line height for better spacing */
+  letter-spacing: 0.5px; /* Add some letter spacing for clarity */
+  color: #333; /* Darken the text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Change to a modern, clean font */
+
+  }
+  
+  .map-section iframe {
+    width: 100%;
+    height: 300px; /* Adjusted height for better visibility */
+    border: none;
+    border-radius: 8px; /* Rounded corners for the map */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for the map */
+  }
+  
+  .reviews-section {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  .reviews-section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  .reviews-section h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f09d51;
+  }
+  
+  .reviews-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .reviews-section li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .reviews-section li:hover {
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .header8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow effect */
+  }
+  
+  .header8 h2 {
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  .navigation8 a {
+    margin: 0 10px;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s; /* Smooth transitions */
+  }
+  
+  .navigation8 a:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+  }
+  .logo1 img {
+    max-height: 70px; /* Adjust the height to fit your design */
+    width: auto;
+    object-fit: contain; /* Ensures the logo image scales well without distortion */
+  }
+
+  .header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    background-color: white;
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+    margin-left:0px;
+  }
+  
+  .header2 h1 {
+    margin: 0;
+  }
+  
+  .navigation2 a {
+    margin: 0 10px;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navigation2 a:hover {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header2 img {
+    max-height: 75px; /* Adjust the height as needed */
+    width: auto;
+     /* Space between the logo and the title */
+  }
+
+  /* CSS for social media icons in the contact section */
+.social-links img {
+  max-width: 50px; /* Set a fixed maximum width for the icons */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 10px; /* Space between the icons */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition effects */
+}
+.social-links{
+  list-style-type: none;
+}
+.social-links a {
+
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Default text color */
+  font-size: 1.2em; /* Font size for better readability */
+}
+
+.social-links a:hover {
+  color: #f09d51; /* Change text color on hover */
+}
+
+.social-links img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  filter: brightness(1.2); /* Slightly brighten the icon on hover */
+}
+.reviews-section ul {
+  list-style-type: none; /* Removes bullets */
+  padding: 0;
+  margin: 0; /* Optional: Adjust margin to ensure no extra space around the list */
+}
+.social-links img {
+  max-width: 50px; /* Set a fixed maximum width for the icons */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 20px; /* Increase space between icons */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition effects */
+}
+iframe{
+  paddding-top:40px;
+}

@@ -1,0 +1,268 @@
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.custom-order-container {
+  padding-top: 60px; /* To avoid content being hidden behind the fixed header */
+}
+
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  background-color: white;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+  z-index: 1000;
+  margin-left:0px;
+}
+
+.header2 h1 {
+  margin: 0;
+}
+
+.navigation2 a {
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation2 a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.header2 img {
+  max-height: 75px; /* Adjust the height as needed */
+  width: auto;
+   /* Space between the logo and the title */
+}
+
+
+/* Container styles */
+.cont1 {
+  padding: 20px;
+}
+
+.custom-order-page01 {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-order-page01:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-order-page01 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e64a19;
+}
+
+/* Selection card styles */
+.selection-card {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selection-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-btn.selected {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+/* Input field styles */
+.selection-card input[type="text"],
+.selection-card input[type="number"],
+.selection-card input[type="date"],
+.selection-card input[type="time"] {
+  width: calc(100% - 22px); /* Adjust width to prevent overlap */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-size: 1.1em; /* Increase font size slightly */
+  font-weight: 500; /* Increase font weight for better readability */
+  line-height: 1.3; /* Increase line height for better spacing */
+  letter-spacing: 0.5px; /* Add some letter spacing for clarity */
+  color: #333; /* Darken the text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Change to a modern, clean font */
+}
+
+.error01 {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button styles */
+.bt01 {
+  display: block;
+  max-width: 300px; /* Adjust the maximum width as needed */
+  margin: 20px auto; /* Center the button horizontally */
+  padding: 15px;
+  background-color:#FF7518;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.bt01:hover {
+  background-color: #FF5F15;
+}
+
+
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+  .custom-order-page01 {
+    padding: 10px;
+  }
+
+  .selection-card h3 {
+    font-size: 16px;
+  }
+
+  .bt01 {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .navigation2 a {
+    margin: 0 5px;
+    padding: 6px 10px;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+}
+
+.header2 img {
+  max-height: 75px; /* Adjust the height as needed */
+  width: auto;
+}
+
+/* Success popup styles */
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  animation: showPopup 3s forwards; /* Apply animation */
+}
+
+/* Keyframes for the showPopup animation */
+@keyframes showPopup {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.success-popup p {
+  margin: 0;
+  font-size: 16px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.success-popup button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.success-popup button:hover {
+  background-color: #45a049;
+}
+button{
+  font-size: 1.1em; /* Increase font size slightly */
+  font-weight: 500; /* Increase font weight for better readability */
+  line-height: 1.3; /* Increase line height for better spacing */
+  letter-spacing: 0.5px; /* Add some letter spacing for clarity */
+  color: #333; /* Darken the text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Change to a modern, clean font */
+}

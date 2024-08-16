@@ -1,0 +1,62 @@
+/* Adjusted styles for meal selection cards */
+.selection-card {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selection-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.search-input {
+  width: 80%; /* Reduced width to avoid overlap */
+  padding: 8px;
+  margin-bottom: 15px; /* Added more margin to create space between input and options */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px; /* Ensures space between the input and options */
+}
+
+.option-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-btn.selected {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.error01 {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

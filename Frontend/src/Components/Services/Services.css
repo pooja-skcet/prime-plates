@@ -1,0 +1,87 @@
+.menu-page4 {
+    font-family: 'Arial, sans-serif';
+    text-align: center;
+    padding: 20px;
+    margin-top:75px;
+  }
+  
+  .event-selector4 {
+    margin: 20px 0;
+  }
+  
+  .event-selector4 label {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+  
+  .event-selector4 select {
+    padding: 5px;
+    font-size: 1em;
+  }
+  
+  .menu-list4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .menu-item4 {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: left;
+  }
+  
+  .menu-item4 h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item4 p {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  .header4 {
+    background-color:white;
+    color: black;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;  /* Make header fixed */
+    top: 0;  /* Position it at the top of the page */
+    width: 100%;  /* Make it span the entire width */
+    z-index: 1000;  /* Ensure it stays above other content */
+    padding-right:200px;
+    
+    
+  }
+  
+  .header4 .logo4 h2 {
+    margin: 0;
+  }
+  
+  .header4 .navigation4 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .header4 .navigation4 ul li {
+    margin-left: 20px;
+  }
+  
+  .header4 .navigation4 ul li a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .header4 .navigation4 ul li a:hover {
+    text-decoration: underline;
+  }
+  .navigation4{
+    margin-right:40px;
+  }

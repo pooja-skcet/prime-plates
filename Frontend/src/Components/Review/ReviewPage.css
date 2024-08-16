@@ -1,0 +1,144 @@
+/* src/components/ReviewPage.css */
+.review-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Adjusted for better readability */
+    color: #333; /* Darker color for contrast */
+}
+
+.overall-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.rating-value {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #FFA500; /* Color for rating value */
+}
+
+.review-count {
+    font-size: 1.2rem;
+}
+
+.review-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    color: #FFA500; /* Color change on hover */
+}
+
+.review-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    animation: slideIn 1s ease-out;
+}
+
+.review-card {
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-stars {
+    display: flex;
+}
+
+.star {
+    font-size: 20px;
+    color: #ccc; /* Default color for empty stars */
+    margin-right: 2px;
+    transition: color 0.3s ease;
+}
+
+.star.filled {
+    color: #FFA500; /* Color for filled stars */
+}
+
+.review-date {
+    font-size: 14px;
+    color: gray;
+}
+
+.review-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.review-author {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .review-card {
+        width: 100%;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+        padding: 0 5px;
+    }
+
+    .overall-rating {
+        font-size: 1.2rem;
+    }
+
+    .rating-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Keyframes for Carousel Animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+.review-page::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+  }

@@ -1,0 +1,133 @@
+/* Admin Form Container */
+.admin-form-container1 {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  margin-top:100px;
+}
+
+.admin-form-container1:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header7 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header7 h2 {
+  margin: 0;
+}
+
+.navigation7 a {
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation7 a:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* Form Elements */
+.admin-form-container1 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.admin-form-container1 form div {
+  margin-bottom: 15px;
+}
+
+.admin-form-container1 label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.admin-form-container1 input[type="text"],
+.admin-form-container1 input[type="number"],
+.admin-form-container1 textarea,
+.admin-form-container1 select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.admin-form-container1 input[type="text"]:focus,
+.admin-form-container1 input[type="number"]:focus,
+.admin-form-container1 textarea:focus,
+.admin-form-container1 select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button */
+.admin-form-container1 button {
+  width: 100%;
+  padding: 10px;
+  background-color: #FF7518;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.admin-form-container1 button:hover {
+  background-color: #FF5F15;
+  transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .admin-form-container1 {
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .admin-form-container1 h2 {
+    font-size: 18px;
+  }
+
+  .admin-form-container1 button {
+    font-size: 14px;
+  }
+}
+
+/* Keyframes for Button Animation */
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.admin-form-container1 button:active {
+  animation: buttonClick 0.2s ease-in-out;
+}

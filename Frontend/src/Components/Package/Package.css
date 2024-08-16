@@ -1,0 +1,304 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Header Styles */
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  background-color: white;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+  z-index: 1000;
+  margin-left:0px;
+}
+
+.header2 h1 {
+  margin: 0;
+}
+
+.navigation2 a {
+  margin: 0 10px;
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation2 a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.header2 img {
+  max-height: 75px; /* Adjust the height as needed */
+  width: auto;
+   /* Space between the logo and the title */
+}
+
+/* Main Content Styles */
+.main2 {
+  margin-top: 80px; /* Adjust margin to account for fixed header */
+  padding: 30px;
+}
+
+.package-selector2, .filter-selector2 {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.package-selector2 button, .filter-selector2 button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.package-selector2 button.active, .filter-selector2 button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.package-selector2 button:hover, .filter-selector2 button:hover {
+  background-color: #bbb;
+  transform: scale(1.05);
+}
+
+/* .menu-items2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-item2 {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.menu-item2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item2 img.menu-item-image2 {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item2 h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #e64a19;
+}
+
+.menu-item2 p {
+  margin: 5px 0;
+}
+
+.menu-item2 .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-item2 a {
+  text-decoration: none;
+  color: inherit;
+} */
+/* Main Content Styles */
+.menu-items2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-item2 {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content */
+  min-height: 300px; /* Adjust as needed for your layout */
+}
+
+.menu-item2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item2 img.menu-item-image2 {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item2 h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #e64a19;
+}
+
+.menu-item2 p {
+  margin: 5px 0;
+  flex: 1; /* Allow the text to take available space */
+}
+
+.menu-item2 .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-item2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Quantity Selector Styles */
+.quantity-selector {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.quantity-selector input[type="number"] {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.quantity-selector input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quantity-selector label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Total Price Styles */
+.total-price {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Button Styles */
+.btn2 {
+  background-color: #FF7518;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn2:hover {
+  background-color:#FF5F15 ;
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navigation2 a {
+    margin: 5px 0;
+    padding: 6px 10px;
+  }
+
+  .package-selector2, .filter-selector2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-selector2 button, .filter-selector2 button {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .menu-item2 {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+}
+
+/* Keyframes for Loading Spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #333;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+p{
+  font-size: 1.1em; /* Increase font size slightly */
+  font-weight: 500; /* Increase font weight for better readability */
+  line-height: 1.3; /* Increase line height for better spacing */
+  letter-spacing: 0.5px; /* Add some letter spacing for clarity */
+  color: #333; /* Darken the text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Change to a modern, clean font */
+}
+.menu-item-description p{
+  font-size: 1.1em; /* Increase font size slightly */
+  font-weight: 500; /* Increase font weight for better readability */
+  line-height: 1.3; /* Increase line height for better spacing */
+  letter-spacing: 0.5px; /* Add some letter spacing for clarity */
+  color: black; /* Darken the text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Change to a modern, clean font */
+}
+label{
+  font-size: 1.1em; /* Increase font size slightly */
+  font-weight: 500; /* Increase font weight for better readability */
+  line-height: 1.3; /* Increase line height for better spacing */
+  letter-spacing: 0.5px; /* Add some letter spacing for clarity */
+  color: black; /* Darken the text color for better contrast */
+  font-family: 'Roboto', sans-serif; /* Change to a modern, clean font */
+}

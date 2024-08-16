@@ -1,0 +1,43 @@
+.get-started-container0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    text-align: center;
+    background-image: url('../Home//HomeImages//home.jpg');
+  }
+  
+  .buttons-container0 {
+    margin-top: 20px;
+  }
+  
+  .login-button {
+    padding: 10px 70px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-login-button0 {
+    background-color: #ff5722; /* Green */
+    color: white;
+  }
+  
+  .user-login-button0:hover {
+    background-color: #e64a19;
+  }
+  
+  .admin-login-button0 {
+    background-color: #ff5722; /* Blue */
+    color: white;
+  }
+  
+  .admin-login-button0:hover {
+    background-color: #e64a19;
+  }
+  

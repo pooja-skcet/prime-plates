@@ -1,0 +1,95 @@
+/* src/components/WhyChooseUs.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+.why-choose-us {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 50px 0;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333; /* Darker color for better readability */
+}
+
+.why-choose-us h2 span {
+  color: #e74c3c;
+}
+
+.why-choose-us p {
+  font-size: 1.2em;
+  color: #555; /* Slightly lighter color for contrast */
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.feature img {
+  max-width: 125px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.feature h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #666; /* Lighter color for better readability */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .feature {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Keyframes for Feature Fade-In */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.features {
+  animation: fadeIn 1s ease-out;
+}
+.why-choose-us::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
