@@ -1,0 +1,53 @@
+package com.example.demo.controller;
+
+import com.example.demo.dto.MenuDTO;
+import com.example.demo.service.MenuService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/menus")
+public class MenuController {
+
+    @Autowired
+    private MenuService menuService;
+
+    @PostMapping("/fetch")
+    public ResponseEntity<MenuDTO> addMenu(@RequestBody MenuDTO menuDTO) {
+        return ResponseEntity.ok(menuService.addMenu(menuDTO));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<MenuDTO> getMenuById(@PathVariable Long id) {
+        return ResponseEntity.ok(menuService.getMenuById(id));
+    }
+
+//    @GetMapping
+//    public ResponseEntity<List<MenuDTO>> getAllMenus() {
+//        return ResponseEntity.ok(menuService.getAllMenus());
+//    }
+    @GetMapping
+    public ResponseEntity<List<MenuDTO>> getAllMenus(
+            @RequestParam(required = false) String type,
+            @RequestParam(required = false) String session,
+            @RequestParam(required = false) String packageType,
+            @RequestParam(required = false) String day) {
+        
+        return ResponseEntity.ok(menuService.getFilteredMenus(type, session, packageType, day));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<MenuDTO> updateMenu(@PathVariable Long id, @RequestBody MenuDTO menuDTO) {
+        return ResponseEntity.ok(menuService.updateMenu(id, menuDTO));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteMenu(@PathVariable Long id) {
+        menuService.deleteMenu(id);
+        return ResponseEntity.noContent().build();
+    }
+}

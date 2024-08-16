@@ -1,0 +1,44 @@
+package com.example.demo.controller;
+
+import com.example.demo.dto.MenuItemsDTO;
+import com.example.demo.service.MenuItemsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/menuitems")
+public class MenuItemsController {
+
+    @Autowired
+    private MenuItemsService menuItemService;
+
+    @PostMapping
+    public ResponseEntity<MenuItemsDTO> addMenuItem(@RequestBody MenuItemsDTO menuItemDTO) {
+        return ResponseEntity.ok(menuItemService.addMenuItem(menuItemDTO));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<MenuItemsDTO> getMenuItemById(@PathVariable Long id) {
+        return ResponseEntity.ok(menuItemService.getMenuItemById(id));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<MenuItemsDTO>> getAllMenuItems() {
+        return ResponseEntity.ok(menuItemService.getAllMenuItems());
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<MenuItemsDTO> updateMenuItem(@PathVariable Long id, @RequestBody MenuItemsDTO menuItemDTO) {
+        return ResponseEntity.ok(menuItemService.updateMenuItem(id, menuItemDTO));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteMenuItem(@PathVariable Long id) {
+        menuItemService.deleteMenuItem(id);
+        return ResponseEntity.noContent().build();
+    }
+}

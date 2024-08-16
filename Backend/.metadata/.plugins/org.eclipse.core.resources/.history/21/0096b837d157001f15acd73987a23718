@@ -1,0 +1,16 @@
+package com.example.demo.service;
+import com.example.demo.dto.CustomOrderDTO;
+
+import java.util.List;
+public interface CustomOrderService {
+	
+	
+
+	    CustomOrderDTO createCustomOrder(CustomOrderDTO customOrderDTO);
+	    CustomOrderDTO getCustomOrderById(Long customOrderId);
+	    List<CustomOrderDTO> getAllCustomOrders();
+	    CustomOrderDTO updateCustomOrder(Long customOrderId, CustomOrderDTO customOrderDTO);
+	    void deleteCustomOrder(Long customOrderId);
+	
+
+}

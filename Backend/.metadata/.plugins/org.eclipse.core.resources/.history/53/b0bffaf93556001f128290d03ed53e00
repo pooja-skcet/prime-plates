@@ -1,0 +1,59 @@
+package com.example.demo.service.impl;
+
+
+
+	import com.example.demo.dto.PackageDTO;
+	import com.example.demo.entity.Package;
+	import com.example.demo.repository.PackageRepository;
+	import com.example.demo.service.PackageService;
+	import org.modelmapper.ModelMapper;
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.stereotype.Service;
+
+	import java.util.List;
+	import java.util.stream.Collectors;
+
+	@Service
+	public class PackageServiceImpl implements PackageService {
+
+	    @Autowired
+	    private PackageRepository packageRepository;
+
+	    @Autowired
+	    private ModelMapper modelMapper;
+
+	    @Override
+	    public PackageDTO createPackage(PackageDTO packageDTO) {
+	        Package aPackage = modelMapper.map(packageDTO, Package.class);
+	        aPackage = packageRepository.save(aPackage);
+	        return modelMapper.map(aPackage, PackageDTO.class);
+	    }
+
+	    @Override
+	    public PackageDTO getPackageById(Long packageId) {
+	        Package aPackage = packageRepository.findById(packageId).orElseThrow(() -> new RuntimeException("Package not found"));
+	        return modelMapper.map(aPackage, PackageDTO.class);
+	    }
+
+	    @Override
+	    public List<PackageDTO> getAllPackages() {
+	        return packageRepository.findAll().stream()
+	                .map(aPackage -> modelMapper.map(aPackage, PackageDTO.class))
+	                .collect(Collectors.toList());
+	    }
+
+	    @Override
+	    public PackageDTO updatePackage(Long packageId, PackageDTO packageDTO) {
+	        Package aPackage = packageRepository.findById(packageId).orElseThrow(() -> new RuntimeException("Package not found"));
+	        modelMapper.map(packageDTO, aPackage);
+	        aPackage = packageRepository.save(aPackage);
+	        return modelMapper.map(aPackage, PackageDTO.class);
+	    }
+
+	    @Override
+	    public void deletePackage(Long packageId) {
+	        packageRepository.deleteById(packageId);
+	    }
+	
+
+}

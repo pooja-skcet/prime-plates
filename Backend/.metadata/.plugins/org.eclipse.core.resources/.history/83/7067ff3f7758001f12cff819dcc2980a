@@ -1,0 +1,10 @@
+package com.example.demo.service;
+
+import com.example.demo.dto.MenuItemDTO;
+import java.util.List;
+
+public interface MenuItemService {
+    List<MenuItemDTO> getMenuItemsByPackageType(String packageType);
+   
+	MenuItemDTO createMenuItems(MenuItemDTO menuItemDTO);
+}

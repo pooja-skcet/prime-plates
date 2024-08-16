@@ -1,0 +1,70 @@
+package com.example.demo.service.impl;
+
+import com.example.demo.dto.MenuDTO;
+import com.example.demo.entity.Menu;
+import com.example.demo.repository.MenuRepository;
+import com.example.demo.service.MenuService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class MenuServiceImpl implements MenuService {
+
+    @Autowired
+    private MenuRepository menuRepository;
+
+    @Autowired
+    private ModelMapper modelMapper;
+
+    @Override
+    public MenuDTO addMenu(MenuDTO menuDTO) {
+        Menu menu = modelMapper.map(menuDTO, Menu.class);
+        menu = menuRepository.save(menu);
+        return modelMapper.map(menu, MenuDTO.class);
+    }
+
+    @Override
+    public MenuDTO getMenuById(Long id) {
+        Menu menu = menuRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Menu not found"));
+        return modelMapper.map(menu, MenuDTO.class);
+    }
+
+    @Override
+    public List<MenuDTO> getAllMenus() {
+        return menuRepository.findAll().stream()
+                .map(menu -> modelMapper.map(menu, MenuDTO.class))
+                .collect(Collectors.toList());
+    }
+    
+    @Override
+    public List<MenuDTO> getFilteredMenus(String type, String session, String packageType, String day) {
+        return menuRepository.findAll().stream()
+                .filter(menu -> ( menu.getType().equals(type) &&
+                                menu.getSession().equals(session) &&
+                                menu.getPackageType().equals(packageType) &&
+                                menu.getDay().equals(day)))
+                .map(menu -> modelMapper.map(menu, MenuDTO.class))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public MenuDTO updateMenu(Long id, MenuDTO menuDTO) {
+        Menu menu = menuRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Menu not found"));
+        modelMapper.map(menuDTO, menu);
+        menu = menuRepository.save(menu);
+        return modelMapper.map(menu, MenuDTO.class);
+    }
+
+    @Override
+    public void deleteMenu(Long id) {
+        menuRepository.deleteById(id);
+    }
+    
+    
+}

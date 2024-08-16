@@ -1,0 +1,60 @@
+package com.example.demo.service.impl;
+
+import com.example.demo.dto.CustomOrderDTO;
+import com.example.demo.entity.CustomOrder;
+import com.example.demo.repository.CustomOrderRepository;
+import com.example.demo.service.CustomOrderService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+
+public class CustomOrderServiceImpl implements CustomOrderService{
+	
+	
+
+	    @Autowired
+	    private CustomOrderRepository customOrderRepository;
+
+	    @Autowired
+	    private ModelMapper modelMapper;
+
+	    @Override
+	    public CustomOrderDTO createCustomOrder(CustomOrderDTO customOrderDTO) {
+	        CustomOrder customOrder = modelMapper.map(customOrderDTO, CustomOrder.class);
+	        customOrder = customOrderRepository.save(customOrder);
+	        return modelMapper.map(customOrder, CustomOrderDTO.class);
+	    }
+
+	    @Override
+	    public CustomOrderDTO getCustomOrderById(Long customOrderId) {
+	        CustomOrder customOrder = customOrderRepository.findById(customOrderId).orElseThrow(() -> new RuntimeException("Custom Order not found"));
+	        return modelMapper.map(customOrder, CustomOrderDTO.class);
+	    }
+
+	    @Override
+	    public List<CustomOrderDTO> getAllCustomOrders() {
+	        return customOrderRepository.findAll().stream()
+	                .map(customOrder -> modelMapper.map(customOrder, CustomOrderDTO.class))
+	                .collect(Collectors.toList());
+	    }
+
+	    @Override
+	    public CustomOrderDTO updateCustomOrder(Long customOrderId, CustomOrderDTO customOrderDTO) {
+	        CustomOrder customOrder = customOrderRepository.findById(customOrderId).orElseThrow(() -> new RuntimeException("Custom Order not found"));
+	        modelMapper.map(customOrderDTO, customOrder);
+	        customOrder = customOrderRepository.save(customOrder);
+	        return modelMapper.map(customOrder, CustomOrderDTO.class);
+	    }
+
+	    @Override
+	    public void deleteCustomOrder(Long customOrderId) {
+	        customOrderRepository.deleteById(customOrderId);
+	    }
+	
+
+}

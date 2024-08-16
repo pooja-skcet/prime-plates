@@ -1,0 +1,107 @@
+package com.example.demo.entity;
+import jakarta.persistence.*;
+import java.util.Date;
+
+@Table(name = "custom_order")
+@Entity
+public class CustomOrder {
+	
+
+	    @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+
+	    private String vegNonVeg;
+	    private String city;
+	    private int count;
+	    private Date date;
+	    private String deliveryAt;
+	    private String time;
+	    private String breakfast;
+	    private String lunch;
+	    private String dinner;
+
+	    // Getters and Setters
+	    public Long getId() {
+	        return id;
+	    }
+
+	    public void setId(Long id) {
+	        this.id = id;
+	    }
+
+	    public String getVegNonVeg() {
+	        return vegNonVeg;
+	    }
+
+	    public void setVegNonVeg(String vegNonVeg) {
+	        this.vegNonVeg = vegNonVeg;
+	    }
+
+	    public String getCity() {
+	        return city;
+	    }
+
+	    public void setCity(String city) {
+	        this.city = city;
+	    }
+
+	    public int getCount() {
+	        return count;
+	    }
+
+	    public void setCount(int count) {
+	        this.count = count;
+	    }
+
+	    public Date getDate() {
+	        return date;
+	    }
+
+	    public void setDate(Date date) {
+	        this.date = date;
+	    }
+
+	    public String getDeliveryAt() {
+	        return deliveryAt;
+	    }
+
+	    public void setDeliveryAt(String deliveryAt) {
+	        this.deliveryAt = deliveryAt;
+	    }
+
+	    public String getTime() {
+	        return time;
+	    }
+
+	    public void setTime(String time) {
+	        this.time = time;
+	    }
+
+	    public String getBreakfast() {
+	        return breakfast;
+	    }
+
+	    public void setBreakfast(String breakfast) {
+	        this.breakfast = breakfast;
+	    }
+
+	    public String getLunch() {
+	        return lunch;
+	    }
+
+	    public void setLunch(String lunch) {
+	        this.lunch = lunch;
+	    }
+
+	    public String getDinner() {
+	        return dinner;
+	    }
+
+	    public void setDinner(String dinner) {
+	        this.dinner = dinner;
+	    }
+	
+
+
+}

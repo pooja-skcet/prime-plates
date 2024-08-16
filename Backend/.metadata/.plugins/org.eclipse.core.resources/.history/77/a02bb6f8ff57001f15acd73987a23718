@@ -1,0 +1,90 @@
+package com.example.demo.entity;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "adminadds_table")
+public class AdminAdd {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String description;
+    private boolean veg;
+    private double price;
+    private String image;
+
+   
+    private String packageType;
+
+    // Default constructor
+    public AdminAdd() {}
+
+    // Parameterized constructor
+    public AdminAdd(String name, String description, boolean veg, double price, String packageType) {
+        this.name = name;
+        this.description = description;
+        this.veg = veg;
+        this.price = price;
+        this.packageType = packageType;
+    }
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isVeg() {
+        return veg;
+    }
+
+    public void setVeg(boolean veg) {
+        this.veg = veg;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getPackageType() {
+        return packageType;
+    }
+
+    public void setPackageType(String packageType) {
+        this.packageType = packageType;
+    }
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+}

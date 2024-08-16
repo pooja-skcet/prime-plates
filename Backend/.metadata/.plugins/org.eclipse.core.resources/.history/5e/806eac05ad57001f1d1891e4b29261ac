@@ -1,0 +1,45 @@
+package com.example.demo.service.impl;
+import com.example.demo.dto.OrderDTO;
+import com.example.demo.entity.Order;
+import com.example.demo.entity.Users;
+import com.example.demo.repository.OrderRepository;
+import com.example.demo.repository.UsersRepository;
+import com.example.demo.service.OrderService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class OrderServiceImpl implements OrderService{
+	
+	
+	
+
+	@Autowired
+    private OrderRepository orderRepository;
+
+    @Autowired
+    private UsersRepository usersRepository;
+
+    @Override
+    public Order createOrder(OrderDTO orderDTO) {
+        Users user = usersRepository.findById(orderDTO.getUserId())
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        Order order = new Order();
+        order.setMenuItemName(orderDTO.getMenuItemName());
+        order.setPrice(orderDTO.getPrice());
+        order.setAddress(orderDTO.getAddress());
+        order.setDate(orderDTO.getDate());
+        order.setTime(orderDTO.getTime());
+        order.setPaymentMode(orderDTO.getPaymentMode());
+        order.setContactNumber(orderDTO.getContactNumber());
+        order.setUser(user);
+
+        return orderRepository.save(order);
+    }
+
+}

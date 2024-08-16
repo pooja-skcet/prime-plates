@@ -1,0 +1,17 @@
+package com.example.demo.service;
+
+
+	import com.example.demo.dto.OrderDTO;
+
+	import java.util.List;
+
+	public interface OrderService {
+
+	    OrderDTO createOrder(OrderDTO orderDTO);
+	    OrderDTO getOrderById(Long orderId);
+	    List<OrderDTO> getAllOrders();
+	    OrderDTO updateOrder(Long orderId, OrderDTO orderDTO);
+	    void deleteOrder(Long orderId);
+	
+
+}

@@ -1,0 +1,25 @@
+package com.example.demo.controller;
+import com.example.demo.dto.CustomOrderDTO;
+import com.example.demo.service.CustomOrderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/custom-orders")
+public class CustomOrderController {
+	
+	
+	    @Autowired
+	    private CustomOrderService customOrderService;
+
+	    @PostMapping
+	    public ResponseEntity<CustomOrderDTO> createOrder(@RequestBody CustomOrderDTO orderDTO) {
+	        return ResponseEntity.ok(customOrderService.createOrder(orderDTO));
+	    }
+	
+
+}

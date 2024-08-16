@@ -1,0 +1,82 @@
+package com.example.demo.dto;
+
+public class PackageDTO {
+	
+
+
+	    private Long id;
+	    private String packageName;
+	    private String packageDescription;
+	    private Double price;
+	    private boolean veg;
+	    private Double rating;
+	    private String img;
+	    private Long adminId;
+
+	    // Getters and Setters
+	    public Long getId() {
+	        return id;
+	    }
+
+	    public void setId(Long id) {
+	        this.id = id;
+	    }
+
+	    public String getPackageName() {
+	        return packageName;
+	    }
+
+	    public void setPackageName(String packageName) {
+	        this.packageName = packageName;
+	    }
+
+	    public String getPackageDescription() {
+	        return packageDescription;
+	    }
+
+	    public void setPackageDescription(String packageDescription) {
+	        this.packageDescription = packageDescription;
+	    }
+
+	    public Double getPrice() {
+	        return price;
+	    }
+
+	    public void setPrice(Double price) {
+	        this.price = price;
+	    }
+
+	    public boolean isVeg() {
+	        return veg;
+	    }
+
+	    public void setVeg(boolean veg) {
+	        this.veg = veg;
+	    }
+
+	    public Double getRating() {
+	        return rating;
+	    }
+
+	    public void setRating(Double rating) {
+	        this.rating = rating;
+	    }
+
+	    public String getImg() {
+	        return img;
+	    }
+
+	    public void setImg(String img) {
+	        this.img = img;
+	    }
+
+	    public Long getAdminId() {
+	        return adminId;
+	    }
+
+	    public void setAdminId(Long adminId) {
+	        this.adminId = adminId;
+	    }
+	
+
+}

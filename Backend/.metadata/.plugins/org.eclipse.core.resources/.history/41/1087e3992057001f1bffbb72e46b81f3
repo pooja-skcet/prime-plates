@@ -1,0 +1,14 @@
+package com.example.demo.service;
+
+import com.example.demo.dto.MenuItemsDTO;
+
+import java.util.List;
+
+public interface MenuItemsService {
+
+    MenuItemsDTO addMenuItem(MenuItemsDTO menuItemDTO);
+    MenuItemsDTO getMenuItemById(Long id);
+    List<MenuItemsDTO> getAllMenuItems();
+    MenuItemsDTO updateMenuItem(Long id, MenuItemsDTO menuItemDTO);
+    void deleteMenuItem(Long id);
+}

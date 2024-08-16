@@ -1,0 +1,26 @@
+package com.example.demo.controller;
+
+import com.example.demo.dto.MenuItemDTO;
+import com.example.demo.service.MenuItemService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/menuItems")
+@CrossOrigin(origins = "http://localhost:3000") // Allow requests from your React frontend
+public class MenuItemController {
+
+    @Autowired
+    private MenuItemService menuItemService;
+
+    @GetMapping("/{packageType}")
+    public List<MenuItemDTO> getMenuItemsByPackageType(@PathVariable String packageType) {
+        return menuItemService.getMenuItemsByPackageType(packageType);
+    }
+    @PostMapping
+    public MenuItemDTO createMenuItem(@RequestBody MenuItemDTO menuItemDTO) {
+        return menuItemService.createMenuItem(menuItemDTO);
+    }
+}

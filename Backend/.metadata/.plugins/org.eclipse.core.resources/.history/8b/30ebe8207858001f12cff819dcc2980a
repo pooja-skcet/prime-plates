@@ -1,0 +1,36 @@
+package com.example.demo.service.impl;
+
+import com.example.demo.dto.CustomOrderDTO;
+import com.example.demo.entity.CustomOrder;
+import com.example.demo.repository.CustomOrderRepository;
+import com.example.demo.service.CustomOrderService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+
+public class CustomOrderServiceImpl implements CustomOrderService{
+	
+	
+
+	    @Autowired
+	    private CustomOrderRepository customOrderRepository;
+
+	    @Autowired
+	    private ModelMapper modelMapper;
+
+	    
+
+
+	    @Override
+	    public CustomOrderDTO createOrder(CustomOrderDTO orderDTO) {
+	        CustomOrder order = modelMapper.map(orderDTO, CustomOrder.class);
+	        order = customOrderRepository.save(order);
+	        return modelMapper.map(order, CustomOrderDTO.class);
+	    }
+
+}

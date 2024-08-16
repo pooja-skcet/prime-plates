@@ -1,0 +1,46 @@
+package com.example.demo.controller;
+import com.example.demo.dto.CustomOrderDTO;
+import com.example.demo.service.CustomOrderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/custom-orders")
+public class CustomOrderController {
+	
+	
+	    @Autowired
+	    private CustomOrderService customOrderService;
+
+	    @PostMapping
+	    public ResponseEntity<CustomOrderDTO> createCustomOrder(@RequestBody CustomOrderDTO customOrderDTO) {
+	        return ResponseEntity.ok(customOrderService.createCustomOrder(customOrderDTO));
+	    }
+
+	    @GetMapping("/{customOrderId}")
+	    public ResponseEntity<CustomOrderDTO> getCustomOrderById(@PathVariable Long customOrderId) {
+	        return ResponseEntity.ok(customOrderService.getCustomOrderById(customOrderId));
+	    }
+
+	    @GetMapping
+	    public ResponseEntity<List<CustomOrderDTO>> getAllCustomOrders() {
+	        return ResponseEntity.ok(customOrderService.getAllCustomOrders());
+	    }
+
+	    @PutMapping("/{id}")
+	    public ResponseEntity<CustomOrderDTO> updateCustomOrder(@PathVariable Long id, @RequestBody CustomOrderDTO customOrderDTO) {
+	        return ResponseEntity.ok(customOrderService.updateCustomOrder(id, customOrderDTO));
+	    }
+
+	    @DeleteMapping("/{id}")
+	    public ResponseEntity<Void> deleteCustomOrder(@PathVariable Long id) {
+	        customOrderService.deleteCustomOrder(id);
+	        return ResponseEntity.noContent().build();
+	    }
+	
+
+}

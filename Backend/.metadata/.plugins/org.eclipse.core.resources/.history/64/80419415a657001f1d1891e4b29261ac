@@ -1,0 +1,93 @@
+package com.example.demo.entity;
+
+
+	import jakarta.persistence.*;
+	import java.util.Date;
+	@Table(name = "`order`")
+	@Entity
+	public class Order {
+
+	    @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+
+	    @ManyToOne
+	    @JoinColumn(name = "package_id")
+	    private Package aPackage;
+
+	    @ManyToOne
+	    @JoinColumn(name = "customer_order_id")
+	    private CustomOrder customOrder;
+
+	    @Column(name = "address")
+	    private String address;
+
+	    @Column(name = "date")
+	    private Date date;
+
+	    @Column(name = "time")
+	    private String time;
+
+	    @ManyToOne
+	    @JoinColumn(name = "user_id")
+	    private Users user;
+
+	    // Getters and Setters
+	    public Long getId() {
+	        return id;
+	    }
+
+	    public void setId(Long id) {
+	        this.id = id;
+	    }
+
+	    public Package getaPackage() {
+	        return aPackage;
+	    }
+
+	    public void setaPackage(Package aPackage) {
+	        this.aPackage = aPackage;
+	    }
+
+	    public CustomOrder getCustomOrder() {
+	        return customOrder;
+	    }
+
+	    public void setCustomOrder(CustomOrder customOrder) {
+	        this.customOrder = customOrder;
+	    }
+
+	    public String getAddress() {
+	        return address;
+	    }
+
+	    public void setAddress(String address) {
+	        this.address = address;
+	    }
+
+	    public Date getDate() {
+	        return date;
+	    }
+
+	    public void setDate(Date date) {
+	        this.date = date;
+	    }
+
+	    public String getTime() {
+	        return time;
+	    }
+
+	    public void setTime(String time) {
+	        this.time = time;
+	    }
+
+	    public Users getUser() {
+	        return user;
+	    }
+
+	    public void setUser(Users user) {
+	        this.user = user;
+	    }
+	
+
+}

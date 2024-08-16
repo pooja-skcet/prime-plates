@@ -1,0 +1,67 @@
+package com.example.demo.dto;
+
+public class AdminAddDTO {
+
+    private String name;
+    private String description;
+    private String packageType;  // Reference by ID
+    private String type;
+    private String veg;  // Veg or Nonveg
+    private double price;
+    private String image;
+    // Getters and Setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPackageType() {
+        return packageType;
+    }
+
+    public void setPackageType(String packageType) {
+        this.packageType = packageType;
+    }
+
+    public String getVeg() {
+        return veg;
+    }
+
+    public void setVeg(String veg) {
+        this.veg = veg;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+}

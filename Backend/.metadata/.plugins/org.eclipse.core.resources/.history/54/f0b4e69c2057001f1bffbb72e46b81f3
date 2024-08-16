@@ -1,0 +1,57 @@
+package com.example.demo.service.impl;
+
+import com.example.demo.dto.MenuItemsDTO;
+import com.example.demo.entity.MenuItems;
+import com.example.demo.repository.MenuItemsRepository;
+import com.example.demo.service.MenuItemsService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class MenuItemsServiceImpl implements MenuItemsService {
+
+    @Autowired
+    private MenuItemsRepository menuItemRepository;
+
+    @Autowired
+    private ModelMapper modelMapper;
+
+    @Override
+    public MenuItemsDTO addMenuItem(MenuItemsDTO menuItemDTO) {
+        MenuItems menuItem = modelMapper.map(menuItemDTO, MenuItems.class);
+        menuItem = menuItemRepository.save(menuItem);
+        return modelMapper.map(menuItem, MenuItemsDTO.class);
+    }
+
+    @Override
+    public MenuItemsDTO getMenuItemById(Long id) {
+        MenuItems menuItem = menuItemRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("MenuItem not found"));
+        return modelMapper.map(menuItem, MenuItemsDTO.class);
+    }
+
+    @Override
+    public List<MenuItemsDTO> getAllMenuItems() {
+        return menuItemRepository.findAll().stream()
+                .map(menuItem -> modelMapper.map(menuItem, MenuItemsDTO.class))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public MenuItemsDTO updateMenuItem(Long id, MenuItemsDTO menuItemDTO) {
+        MenuItems menuItem = menuItemRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("MenuItem not found"));
+        modelMapper.map(menuItemDTO, menuItem);
+        menuItem = menuItemRepository.save(menuItem);
+        return modelMapper.map(menuItem, MenuItemsDTO.class);
+    }
+
+    @Override
+    public void deleteMenuItem(Long id) {
+        menuItemRepository.deleteById(id);
+    }
+}

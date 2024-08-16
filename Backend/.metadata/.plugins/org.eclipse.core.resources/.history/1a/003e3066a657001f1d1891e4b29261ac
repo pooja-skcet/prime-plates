@@ -1,0 +1,13 @@
+package com.example.demo.service;
+
+
+	import com.example.demo.dto.OrderDTO;
+	import com.example.demo.dto.Order;
+	import java.util.List;
+
+	public interface OrderService {
+
+		 Order createOrder(OrderDTO orderDTO);
+	
+
+}
